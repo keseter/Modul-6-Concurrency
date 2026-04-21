@@ -3,6 +3,11 @@ use std::thread;
 
 type Job = Box<dyn FnOnce() + Send + 'static>;
 
+#[derive(Debug)]
+pub enum PoolCreationError {
+    InvalidSize,
+}
+
 pub struct ThreadPool {
     #[allow(dead_code)]
     workers: Vec<Worker>,
@@ -10,9 +15,20 @@ pub struct ThreadPool {
 }
 
 impl ThreadPool {
+    pub fn build(size: usize) -> Result<ThreadPool, PoolCreationError> {
+        if size == 0 {
+            return Err(PoolCreationError::InvalidSize);
+        }
+
+        Ok(Self::create(size))
+    }
+
     pub fn new(size: usize) -> ThreadPool {
         assert!(size > 0);
+        Self::create(size)
+    }
 
+    fn create(size: usize) -> ThreadPool {
         let (sender, receiver) = mpsc::channel();
         let receiver = Arc::new(Mutex::new(receiver));
 
