@@ -1,12 +1,114 @@
-   0.139642400s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Module-6-Concurrency\\hello\\src\\main.rs"
-   0.139691900s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Module-6-Concurrency\\hello\\target\\debug\\.fingerprint\\hello-f75d89e07919e69d\\dep-bin-hello"
-   0.139699900s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13421165996, nanos: 846549600 } < FileTime { seconds: 13421166411, nanos: 707153400 }
-   0.139907500s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint: fingerprint dirty for hello v0.1.0 (C:\Module-6-Concurrency\hello)/Check { test: false }/TargetInner { name: "hello", doc: true, ..: with_path("C:\\Module-6-Concurrency\\hello\\src\\main.rs", Edition2024) }
-   0.139952600s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Module-6-Concurrency\\hello\\target\\debug\\.fingerprint\\hello-f75d89e07919e69d\\dep-bin-hello", reference_mtime: FileTime { seconds: 13421165996, nanos: 846549600 }, stale: "C:\\Module-6-Concurrency\\hello\\src\\main.rs", stale_mtime: FileTime { seconds: 13421166411, nanos: 707153400 } }))
-   0.140867700s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Module-6-Concurrency\\hello\\src\\main.rs"
-   0.140886700s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Module-6-Concurrency\\hello\\target\\debug\\.fingerprint\\hello-c9c0db3da49977ba\\dep-test-bin-hello"
-   0.140893100s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13421165996, nanos: 846549600 } < FileTime { seconds: 13421166411, nanos: 707153400 }
-   0.141060000s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint: fingerprint dirty for hello v0.1.0 (C:\Module-6-Concurrency\hello)/Check { test: true }/TargetInner { name: "hello", doc: true, ..: with_path("C:\\Module-6-Concurrency\\hello\\src\\main.rs", Edition2024) }
-   0.141082900s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Module-6-Concurrency\\hello\\target\\debug\\.fingerprint\\hello-c9c0db3da49977ba\\dep-test-bin-hello", reference_mtime: FileTime { seconds: 13421165996, nanos: 846549600 }, stale: "C:\\Module-6-Concurrency\\hello\\src\\main.rs", stale_mtime: FileTime { seconds: 13421166411, nanos: 707153400 } }))
+   0.031683400s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint: fingerprint error for hello v0.1.0 (C:\Module-6-Concurrency\hello)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hello", ["lib"], "C:\\Module-6-Concurrency\\hello\\src\\lib.rs", Edition2024) }
+   0.035276900s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Module-6-Concurrency\hello\target\debug\.fingerprint\hello-7a3216eceb65acc2\lib-hello`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.066560900s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint: fingerprint error for hello v0.1.0 (C:\Module-6-Concurrency\hello)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("hello", ["lib"], "C:\\Module-6-Concurrency\\hello\\src\\lib.rs", Edition2024) }
+   0.066615000s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Module-6-Concurrency\hello\target\debug\.fingerprint\hello-98d8357b1fd666c8\test-lib-hello`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.068284200s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint: fingerprint error for hello v0.1.0 (C:\Module-6-Concurrency\hello)/Check { test: false }/TargetInner { name: "hello", doc: true, ..: with_path("C:\\Module-6-Concurrency\\hello\\src\\main.rs", Edition2024) }
+   0.068323500s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Module-6-Concurrency\hello\target\debug\.fingerprint\hello-bc9a0456b80d0831\bin-hello`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.070061400s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint: fingerprint error for hello v0.1.0 (C:\Module-6-Concurrency\hello)/Check { test: true }/TargetInner { name: "hello", doc: true, ..: with_path("C:\\Module-6-Concurrency\\hello\\src\\main.rs", Edition2024) }
+   0.070100900s  INFO prepare_target{force=false package_id=hello v0.1.0 (C:\Module-6-Concurrency\hello) target="hello"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Module-6-Concurrency\hello\target\debug\.fingerprint\hello-0b7d5fb8336550c4\test-bin-hello`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
     Checking hello v0.1.0 (C:\Module-6-Concurrency\hello)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.28s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.84s
